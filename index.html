@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Password Generator</h1>
+      <div class="display-container">
+        <input readonly placeholder="Password" class="display" />
+        <button class="displaypsw">
+          <span displayMsg class="tooltip"></span>
+          <img
+            src="./images/copy-icon-vector-illustration.jpg"
+            alt="img"
+            height="23"
+            width="23"
+          />
+        </button>
+      </div>
+      <div class="input-container">
+      <div class="passwor-length">
+        <p>Password Length</p>
+        <p lengthdisplay>0</p>
+      </div>
+      <input  class="slider"   type="range" min="1" max="20" step="1" passlength />
+
+      <!--check boxes-->
+      <div class="check-box">
+        <input type="checkbox" id="uppercase" />
+        <label for="uppercase">Include Uppercase Letters</label>
+      </div>
+      <div class="check-box">
+        <input type="checkbox" id="lowercase" />
+        <label for="lowercase">Include Lowercase Letters</label>
+      </div>
+      <div class="check-box">
+        <input type="checkbox" id="numbers" />
+        <label for="numbers">Include Number</label>
+      </div>
+      <div class="check-box">
+        <input type="checkbox" id="Symbols" />
+        <label for="Symbols">Include Symbols</label>
+      </div>
+      <div class="strength">
+        <p>Strength</p>
+        <div class="strength-l" indicator-color></div>
+      </div>
+      <button class="click-generate">Generate Password</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

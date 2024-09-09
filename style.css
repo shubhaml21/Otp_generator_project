@@ -1,0 +1,221 @@
+*,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+body{
+   width: 100vw;
+   height: 100vh;
+   background: linear-gradient(231deg,rgba(22,6,40,1)0%, rgba(52,28,79,1)50%, rgba(88,7,125,1)100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+   width: 90%;
+   max-width: 450px;
+   
+}
+h1{
+    color: white;
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    list-style: none;
+    line-height: 1.2;
+
+}
+.display-container{
+    position: relative;
+    background-color:rgba(22,6,40,1) ;
+    border-radius:1rem ;
+    border-bottom: 0.35rem solid rgba(88,7,125,1) ;
+    margin: 1rem 0;
+    padding: 0.35rem ;
+}
+.display{
+    width: 100%;
+    background-color:transparent;
+    padding: 1.15rem 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+    color: rgb(187, 222, 13);
+    border: none;
+   
+}
+.display::placeholder{
+position: absolute;
+top: 50%;
+left: 1.5rem;
+font-size: 1.5rem;
+line-height: 30px;
+color: rgb(187, 222, 13);
+opacity: 0.65;
+text-transform: uppercase;
+transform: translateY(-50%);
+}
+.display-container button{
+    position: absolute;
+    top: 50%;
+    right:1.5rem ;
+    transform: translateY(-50%);
+}
+.input-container{
+    border-radius: 1rem;
+    width: 100%;
+    background-color: rgba(22,6,40,1);
+    padding: 2rem;
+    border-bottom: 0.35rem solid rgba(88,7,125,1) ;
+}
+.passwor-length{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.passwor-length p:nth-child(1){
+    color: white;
+    font-size: 1.5rem;
+}
+.passwor-length p:nth-child(2){
+    color: rgb(187, 222, 13);
+    font-size: 1.5rem;
+}
+
+.strength{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+}
+.strength p{
+    color: white;
+    font-size: 1.5rem;
+}
+.strength div{
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+
+}
+.click-generate{
+    width: 100%;
+    padding: 1rem 0;
+    background-color: blueviolet;
+    text-align: center;
+    border-radius: 0.75rem;
+    border-bottom: 0.35rem solid rgb(187, 222, 13);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(187, 222, 13);
+    font-weight: 600;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+ 
+.check-box{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+}
+.check-box input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(32, 165, 231);
+    position: relative;
+    cursor: pointer;
+    border-radius: 0.35rem;
+}
+.check-box input:checked{
+    background-color: aqua;
+    
+}
+.check-box input:checked::before{
+    content: '✔';
+    position: absolute;
+    color: black;
+    font-size: 1.05rem;
+    font-weight: 600;
+    left: 50%;
+    transform: translateX(-50%) translateY(20%);
+     top: -3.5px;
+
+}
+.check-box label{
+    color: white;
+    font-size: 1.25rem;
+    letter-spacing: 0.75px;
+}
+.slider{
+    appearance: none;
+    height: 1.2rem;
+    width: 100%;
+cursor: pointer;
+background-color: rgb(52, 28, 79);
+border-radius: 1.8rem;
+margin-top:2rem;
+margin-bottom: 1.5rem;
+background-image: linear-gradient(rgb(188, 21, 244),rgb(188, 21, 244));
+background-repeat: no-repeat;
+outline: none;
+border: none;
+position: relative;
+z-index: 1;
+}
+.slider::-webkit-slider-thumb{
+    
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: rgb(225, 240, 16);
+    cursor: pointer;
+    margin-top:-3px ;
+    transition: all 100ms ease-in;
+    position: relative;
+    z-index: 10;
+}
+.slider:focus{
+    outline: 3px solid rgba(255, 229, 61,0.80);
+
+}
+.slider::-webkit-slider-thumb:hover{
+    outline: 2px solid rgb(225, 240, 16);
+    background-color: rgb(22, 6, 40);
+    box-shadow: 0px 0px 25px 5px rgba(255, 229, 61,0.80);
+}
+.displaypsw{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.tooltip{
+    position: absolute;
+    background-color: rgb(169, 1, 247);
+    color: rgb(225, 240, 16);
+    font-size: 1.25rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+.tooltip.active{
+    opacity: 1;
+    transform: scale(1);
+}
